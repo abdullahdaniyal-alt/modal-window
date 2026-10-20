@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modal Window</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="hero">
+    <h1>Get in touch</h1>
+    <p>Have a question or an idea? Open the window and send us a quick message.</p>
+    <button class="btn btn-primary" id="openModal" type="button">Contact us</button>
+  </main>
+
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="form-view">
+        <div class="modal-head">
+          <h2 id="modalTitle">Send us a message</h2>
+          <button class="close" type="button" data-close aria-label="Close">&times;</button>
+        </div>
+        <p class="modal-sub">We usually reply within one business day.</p>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" autocomplete="name">
+          <div class="error">Please enter your name.</div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+          <div class="error">Please enter a valid email address.</div>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="How can we help?"></textarea>
+          <div class="error">Please write a message.</div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-ghost" type="button" data-close>Cancel</button>
+          <button class="btn btn-primary" id="sendBtn" type="button">Send message</button>
+        </div>
+      </div>
+
+      <div class="success">
+        <div class="tick">&#10003;</div>
+        <h3>Message sent</h3>
+        <p>Thanks for reaching out. We’ll get back to you soon.</p>
+        <button class="btn btn-primary" type="button" data-close>Done</button>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
